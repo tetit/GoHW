@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import . "strings"
 
 func Solve(s string) rune {
 	rez := make([]rune, len(s))
@@ -58,10 +59,24 @@ func rezNorep(s string) rune {
 	return min
 }
 
+func SolveKata(s string) rune {
+    max,r := 0,rune(123)
+    for _,c := range s {
+        d := LastIndex(s, string(c)) - Index(s, string(c))
+        if max < d || max == d && r > c {
+            max = d; r = c
+        }
+    }
+    return r
+}
+
 func main() {
 
 	s := "aabccc"
 
 	fmt.Println(Solve(s))
+	fmt.Println(SolveKata(s))
+	fmt.Println("a - z", 'a', 'z')
+	fmt.Println(string(rune(123)))
 
 }
