@@ -16,7 +16,7 @@ func TestDo(t *testing.T) {
 	}{
 		"valid I first case valid S D":  {inputI: 3, inputS: "d", inputD: true, expRez: "[3D]", expErr: ""},
 		"valid I second case valid S D": {inputI: 21, inputS: "d", inputD: true, expRez: "D", expErr: ""},
-		"invalid I valid S D":           {inputI: 10, inputS: "d", inputD: true, expRez: "", expErr: "invalid i"},
+		"invalid I valid S D":           {inputI: 10, inputS: "d", inputD: true, expRez: "", expErr: "invalid s"},
 		"invalid S valid I D":           {inputI: 3, inputS: "e", inputD: true, expRez: "", expErr: "invalid s"},
 	}
 

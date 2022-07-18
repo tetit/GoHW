@@ -14,7 +14,7 @@ func Do(s string, i int, b bool) (string, error) {
 		res += strconv.Itoa(i)
 	case 13, 21, 34:
 	default:
-		return "", errors.New("invalid i")
+		return "", errors.New("invalid s")
 	}
 
 	switch s {
